@@ -1,8 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Designer from "./pages/Designer";
+
 function App() {
   return (
-    <h1 style={{ fontSize: "40px" }}>
-      KRIVA IS LIVE 🚀
-    </h1>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/designer" element={<Designer />} />
+      </Routes>
+    </Router>
   );
 }
 
